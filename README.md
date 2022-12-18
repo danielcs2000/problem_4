@@ -12,6 +12,6 @@ Input test
 
 #### Complexity analysis
 
-**Time Complexity**: O(n*log(log(n)))
+**Time Complexity**: O(n*log(log(n)) + sqrt(n))
 
 **Auxiliary Space**: O(n)
