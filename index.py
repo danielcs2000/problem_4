@@ -10,6 +10,11 @@ class Solution:
         self.solve()
 
     def sieve_of_eratosthenes(self) -> None:
+        """
+        Precalculate N first prime numbers using sieve of eratosthenes
+
+        Time complexity: O(n*log(log(n)))
+        """
         p = 2
         while p * p <= N:
             if PRIME[p]:
@@ -18,6 +23,11 @@ class Solution:
             p += 1
 
     def find_two_primes(self, n: int) -> Tuple[int, int]:
+        """
+        Given n finds two prime numbers a and b such that n = a * b
+
+        Complexity: O(srqt(n))
+        """
         a, b = None, None
         for i in range(2, int(sqrt(n))):
             if PRIME[i] and n % i == 0:
@@ -29,7 +39,9 @@ class Solution:
         return a, b
 
     def solve(self) -> None:
-
+        """
+        Handles user input
+        """
         self.sieve_of_eratosthenes()
         p = int(input())
 
